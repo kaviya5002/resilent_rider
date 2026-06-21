@@ -1,0 +1,115 @@
+/* Neural Network Particle Background */
+.particle-network-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle-network-background canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto;
+}
+
+/* Subtle gradient overlay for depth */
+.network-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(17, 34, 80, 0.02) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure smooth animations */
+.particle-network-background * {
+  will-change: transform, opacity;
+}
+
+/* Performance optimization for mobile */
+@media (max-width: 768px) {
+  .particle-network-background {
+    opacity: 0.6;
+  }
+  
+  .network-overlay {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(17, 34, 80, 0.05) 100%
+    );
+  }
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .particle-network-background {
+    display: none;
+  }
+}
+
+/* Dark mode adjustments */
+.dark-mode .particle-network-background {
+  opacity: 0.8;
+}
+
+.dark-mode .network-overlay {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(96, 165, 250, 0.03) 100%
+  );
+}
+
+/* Ensure particles stay behind all content */
+.particle-network-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
+
+/* Animation for initial load */
+@keyframes fadeInNetwork {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.particle-network-background {
+  animation: fadeInNetwork 1.5s ease-in-out;
+}
+
+/* Glow effect enhancement */
+.particle-network-background canvas {
+  filter: contrast(1.1) brightness(1.05);
+}
+
+/* High performance mode for low-end devices */
+@media (max-width: 480px) {
+  .particle-network-background canvas {
+    filter: none;
+  }
+}

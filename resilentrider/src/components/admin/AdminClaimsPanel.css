@@ -1,0 +1,21 @@
+.admin-claims-panel {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17,34,80,0.08);
+}
+
+@media (max-width: 1200px) {
+  .admin-claims-panel > div:first-of-type {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-claims-panel {
+    padding: 1rem;
+  }
+  .admin-claims-panel > div:first-of-type {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

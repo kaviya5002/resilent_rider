@@ -1,0 +1,158 @@
+.insurance-wallet {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.08);
+}
+
+.insurance-card {
+  background: linear-gradient(135deg, #112250 0%, #3C5070 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 16px rgba(17, 34, 80, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6B7280;
+}
+
+.status-indicator.active {
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.card-logo {
+  font-size: 2rem;
+}
+
+.card-body {
+  margin-bottom: 1.5rem;
+}
+
+.plan-name {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #E0B88F;
+}
+
+.coverage-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.coverage-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.footer-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-item {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.benefit-icon {
+  font-size: 1.75rem;
+}
+
+.benefit-info {
+  flex: 1;
+}
+
+.benefit-label {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.125rem;
+}
+
+.benefit-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .insurance-wallet {
+    padding: 1.5rem;
+  }
+
+  .insurance-card {
+    padding: 1.25rem;
+  }
+
+  .coverage-amount {
+    font-size: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}

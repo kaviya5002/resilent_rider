@@ -1,0 +1,61 @@
+.benefits-page {
+  min-height: 100vh;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(17, 34, 80, 0.1);
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
+}

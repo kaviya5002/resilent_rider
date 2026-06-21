@@ -1,0 +1,22 @@
+.ripple-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.ripple-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ripple-button:disabled:hover {
+  transform: none;
+}

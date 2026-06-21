@@ -1,0 +1,109 @@
+.dynamic-pricing {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.08);
+}
+
+.pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.risk-score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background);
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.risk-score-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pricing-divider {
+  height: 1px;
+  background: rgba(17, 34, 80, 0.08);
+  margin: 0.75rem 0;
+}
+
+.pricing-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.pricing-row.final {
+  padding-top: 0.75rem;
+}
+
+.pricing-label {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.pricing-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.pricing-value.risk-factor {
+  color: #F59E0B;
+}
+
+.pricing-value.final-value {
+  font-size: 1.25rem;
+  color: #10B981;
+}
+
+.risk-bar-wrapper {
+  margin-top: 0.5rem;
+}
+
+.risk-bar {
+  height: 8px;
+  background: rgba(17, 34, 80, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.risk-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .dynamic-pricing {
+    padding: 1.5rem;
+  }
+}

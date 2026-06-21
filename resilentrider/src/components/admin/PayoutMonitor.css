@@ -1,0 +1,126 @@
+.payout-monitor {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17,34,80,0.08);
+}
+
+.pm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pm-meta { display: flex; align-items: center; gap: 0.5rem; }
+
+.pm-total {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #10B981;
+  background: rgba(16,185,129,0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.pm-refresh {
+  background: none;
+  border: 1px solid rgba(17,34,80,0.15);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.2s;
+}
+.pm-refresh:hover { background: var(--background); }
+
+/* ── Placeholder ─────────────────────────────────────────────── */
+.pm-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 160px;
+  background: rgba(17,34,80,0.03);
+  border: 1px dashed rgba(17,34,80,0.15);
+  border-radius: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.pm-spinner {
+  width: 30px; height: 30px;
+  border: 3px solid rgba(17,34,80,0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: pm-spin 0.75s linear infinite;
+}
+@keyframes pm-spin { to { transform: rotate(360deg); } }
+
+/* ── Table ───────────────────────────────────────────────────── */
+.pm-table-wrap { overflow-x: auto; }
+
+.pm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.pm-table thead th {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--background);
+  border-bottom: 2px solid var(--neutral);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pm-table tbody tr {
+  border-bottom: 1px solid rgba(17,34,80,0.05);
+  transition: background 0.15s;
+}
+.pm-table tbody tr:hover { background: var(--background); }
+.pm-table td { padding: 0.75rem 1rem; }
+
+.pm-rider       { font-weight: 600; color: var(--text-primary); }
+.pm-rider__email { display: block; font-size: 0.72rem; color: var(--text-light); font-weight: 400; }
+.pm-type        { text-transform: capitalize; font-size: 0.82rem; color: var(--text-secondary); }
+.pm-amount      { color: var(--text-secondary); }
+.pm-approved    { font-weight: 700; color: #10B981; }
+.pm-date        { font-size: 0.78rem; color: var(--text-light); }
+
+.pm-order-id {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  background: rgba(17,34,80,0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--primary);
+}
+.pm-order-none { color: var(--text-light); }
+
+.pm-badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pm-badge--done    { background: rgba(16,185,129,0.12); color: #10B981; }
+.pm-badge--pending { background: rgba(245,158,11,0.12); color: #F59E0B; }
+
+/* ── Dark mode ──────────────────────────────────────────────── */
+[data-theme='dark'] .payout-monitor { background: #1a2744; }
+
+@media (max-width: 768px) { .payout-monitor { padding: 1.5rem; } }

@@ -1,0 +1,158 @@
+/* ── Card shell — matches AIRiskMonitoring pattern exactly ─── */
+.live-map-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.08);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.live-map__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.live-map__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+}
+
+.live-map__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.live-map__dot.active {
+  background: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  animation: lm-pulse 2s infinite;
+}
+
+.live-map__dot.inactive { background: #6B7280; }
+
+@keyframes lm-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+  50%       { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0.06); }
+}
+
+.live-map__status {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.live-map__time { color: var(--text-light); }
+
+/* ── Map wrapper ─────────────────────────────────────────────── */
+.live-map__map-wrap {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(17, 34, 80, 0.1);
+}
+
+.live-map__leaflet { display: block; }
+
+/* ── Placeholder (loading / error / empty) ───────────────────── */
+.live-map__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 320px;
+  border-radius: 0.75rem;
+  background: rgba(17, 34, 80, 0.03);
+  border: 1px dashed rgba(17, 34, 80, 0.15);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.live-map__placeholder--error {
+  background: rgba(239, 68, 68, 0.04);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #EF4444;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────── */
+.live-map__spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid rgba(17, 34, 80, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: lm-spin 0.75s linear infinite;
+}
+
+@keyframes lm-spin { to { transform: rotate(360deg); } }
+
+/* ── Coords footer ───────────────────────────────────────────── */
+.live-map__coords {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.875rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid rgba(17, 34, 80, 0.07);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Custom marker ───────────────────────────────────────────── */
+.lm-marker-outer {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(224, 184, 143, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lm-pulse-marker 2s infinite;
+}
+
+.lm-marker-inner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #E0B88F;
+  border: 2.5px solid #112250;
+}
+
+@keyframes lm-pulse-marker {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(224, 184, 143, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(224, 184, 143, 0.0); }
+}
+
+/* ── Dark mode ───────────────────────────────────────────────── */
+[data-theme='dark'] .live-map-card {
+  background: #1a2744;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .live-map__map-wrap {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .live-map__placeholder {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .live-map__coords {
+  border-top-color: rgba(255, 255, 255, 0.07);
+  color: #8fa3c8;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .live-map-card { padding: 1.5rem; }
+  .live-map__header { flex-direction: column; align-items: flex-start; }
+}

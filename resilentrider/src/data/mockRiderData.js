@@ -1,0 +1,33 @@
+export const MOCK_RIDERS = [
+  { _id: 'RDR001', name: 'Arjun Kumar',     email: 'arjun.kumar@gmail.com',   phone: '9876543210', city: 'Chennai',    vehicleType: 'Bike',    riskLevel: 'LOW',    riskScore: 94, totalDeliveries: 1842, totalEarnings: 58400, totalClaims: 0, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-01-15', lastActive: '2025-06-10' },
+  { _id: 'RDR002', name: 'Priya Sharma',    email: 'priya.sharma@gmail.com',  phone: '9845123456', city: 'Bangalore',  vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 91, totalDeliveries: 2103, totalEarnings: 67200, totalClaims: 1, plan: 'Premium Plan',  premium: 40, coverageAmount: 50000, policyStatus: 'active',    joinedDate: '2024-02-20', lastActive: '2025-06-11' },
+  { _id: 'RDR003', name: 'Ravi Patel',      email: 'ravi.patel@gmail.com',    phone: '9712345678', city: 'Mumbai',     vehicleType: 'Bike',    riskLevel: 'MEDIUM', riskScore: 76, totalDeliveries: 987,  totalEarnings: 31500, totalClaims: 2, plan: 'Basic Plan',    premium: 15, coverageAmount: 10000, policyStatus: 'active',    joinedDate: '2024-03-05', lastActive: '2025-06-09' },
+  { _id: 'RDR004', name: 'Meena Devi',      email: 'meena.devi@gmail.com',    phone: '9632587410', city: 'Hyderabad',  vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 88, totalDeliveries: 1654, totalEarnings: 52800, totalClaims: 0, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-01-28', lastActive: '2025-06-11' },
+  { _id: 'RDR005', name: 'Suresh Babu',     email: 'suresh.babu@gmail.com',   phone: '9514785236', city: 'Chennai',    vehicleType: 'Bike',    riskLevel: 'HIGH',   riskScore: 58, totalDeliveries: 743,  totalEarnings: 23700, totalClaims: 4, plan: 'Basic Plan',    premium: 15, coverageAmount: 10000, policyStatus: 'suspended', joinedDate: '2024-04-12', lastActive: '2025-05-30' },
+  { _id: 'RDR006', name: 'Kavitha Nair',    email: 'kavitha.nair@gmail.com',  phone: '9387654321', city: 'Kochi',      vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 96, totalDeliveries: 2341, totalEarnings: 74800, totalClaims: 0, plan: 'Premium Plan',  premium: 40, coverageAmount: 50000, policyStatus: 'active',    joinedDate: '2023-11-10', lastActive: '2025-06-11' },
+  { _id: 'RDR007', name: 'Dinesh Raj',      email: 'dinesh.raj@gmail.com',    phone: '9265874130', city: 'Coimbatore', vehicleType: 'Bike',    riskLevel: 'MEDIUM', riskScore: 72, totalDeliveries: 1120, totalEarnings: 35700, totalClaims: 2, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-05-18', lastActive: '2025-06-08' },
+  { _id: 'RDR008', name: 'Anitha Krishnan', email: 'anitha.k@gmail.com',      phone: '9147852369', city: 'Madurai',    vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 89, totalDeliveries: 1876, totalEarnings: 59900, totalClaims: 1, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-02-14', lastActive: '2025-06-10' },
+  { _id: 'RDR009', name: 'Vijay Murugan',   email: 'vijay.m@gmail.com',       phone: '9036985214', city: 'Trichy',     vehicleType: 'Bike',    riskLevel: 'HIGH',   riskScore: 49, totalDeliveries: 512,  totalEarnings: 16300, totalClaims: 5, plan: 'Basic Plan',    premium: 15, coverageAmount: 10000, policyStatus: 'suspended', joinedDate: '2024-06-01', lastActive: '2025-05-20' },
+  { _id: 'RDR010', name: 'Lakshmi Priya',   email: 'lakshmi.p@gmail.com',     phone: '8925874136', city: 'Bangalore',  vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 93, totalDeliveries: 2087, totalEarnings: 66700, totalClaims: 0, plan: 'Premium Plan',  premium: 40, coverageAmount: 50000, policyStatus: 'active',    joinedDate: '2023-12-05', lastActive: '2025-06-11' },
+  { _id: 'RDR011', name: 'Karthik Selvam',  email: 'karthik.s@gmail.com',     phone: '8814725369', city: 'Chennai',    vehicleType: 'Bike',    riskLevel: 'MEDIUM', riskScore: 81, totalDeliveries: 1345, totalEarnings: 42900, totalClaims: 1, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-03-22', lastActive: '2025-06-09' },
+  { _id: 'RDR012', name: 'Deepa Sundaram',  email: 'deepa.s@gmail.com',       phone: '8703698521', city: 'Salem',      vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 87, totalDeliveries: 1598, totalEarnings: 51000, totalClaims: 0, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-01-08', lastActive: '2025-06-10' },
+  { _id: 'RDR013', name: 'Murugan Pillai',  email: 'murugan.p@gmail.com',     phone: '8592587413', city: 'Tirunelveli',vehicleType: 'Bike',    riskLevel: 'HIGH',   riskScore: 63, totalDeliveries: 876,  totalEarnings: 27900, totalClaims: 3, plan: 'Basic Plan',    premium: 15, coverageAmount: 10000, policyStatus: 'active',    joinedDate: '2024-04-30', lastActive: '2025-06-07' },
+  { _id: 'RDR014', name: 'Saranya Devi',    email: 'saranya.d@gmail.com',     phone: '8481369258', city: 'Vellore',    vehicleType: 'Scooter', riskLevel: 'LOW',    riskScore: 92, totalDeliveries: 1987, totalEarnings: 63400, totalClaims: 0, plan: 'Premium Plan',  premium: 40, coverageAmount: 50000, policyStatus: 'active',    joinedDate: '2023-10-15', lastActive: '2025-06-11' },
+  { _id: 'RDR015', name: 'Balamurugan S',   email: 'bala.s@gmail.com',        phone: '8370258147', city: 'Erode',      vehicleType: 'Bike',    riskLevel: 'MEDIUM', riskScore: 74, totalDeliveries: 1102, totalEarnings: 35100, totalClaims: 2, plan: 'Standard Plan', premium: 25, coverageAmount: 25000, policyStatus: 'active',    joinedDate: '2024-05-05', lastActive: '2025-06-08' },
+];
+
+export const MOCK_STATS = {
+  totalRiders: 15,
+  activePlans: 13,
+  totalPremiumCollected: 42500,
+  totalClaimsPaid: 18700,
+  riskPoolBalance: 23800,
+  pendingClaims: 4,
+  fraudAlerts: 2,
+};
+
+export const MOCK_FRAUD_ALERTS = [
+  { _id: 'F001', fraudScore: 85, rider: { name: 'Suresh Babu' },    description: 'Multiple claims in 30 days — 4 claims filed', amount: 8500,  claimType: 'accident',       createdAt: '2025-06-01', status: 'investigating'   },
+  { _id: 'F002', fraudScore: 78, rider: { name: 'Vijay Murugan' },  description: 'GPS location mismatch during claim filing',   amount: 12000, claimType: 'vehicle_damage', createdAt: '2025-05-28', status: 'fraud_suspected' },
+  { _id: 'F003', fraudScore: 62, rider: { name: 'Murugan Pillai' }, description: 'Claim filed 3 days after incident report',    amount: 5500,  claimType: 'medical',        createdAt: '2025-06-05', status: 'pending'         },
+];

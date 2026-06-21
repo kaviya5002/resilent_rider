@@ -1,0 +1,119 @@
+.workflow-section {
+  background: var(--background);
+  padding: 5rem 0;
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.workflow-steps::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), var(--secondary));
+  z-index: 0;
+}
+
+.workflow-step {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.08);
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.workflow-step:hover {
+  box-shadow: 0 12px 24px rgba(17, 34, 80, 0.15);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 8px rgba(17, 34, 80, 0.2);
+}
+
+.step-icon {
+  font-size: 3rem;
+  margin: 2rem 0 1rem;
+}
+
+.workflow-step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.workflow-step p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.workflow-cta {
+  text-align: center;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.08);
+}
+
+.workflow-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .workflow-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-section {
+    padding: 3rem 0;
+  }
+
+  .workflow-steps {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .workflow-step {
+    padding: 2rem 1.5rem;
+  }
+
+  .workflow-cta {
+    padding: 2rem;
+  }
+
+  .workflow-cta h3 {
+    font-size: 1.5rem;
+  }
+}

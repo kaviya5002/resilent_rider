@@ -1,0 +1,362 @@
+/* ═══════════════════════════════════════════════════════════════
+   RESILENTRIDER — RESPONSIVE COMPATIBILITY LAYER
+   Covers: Mobile (< 480px), Tablet (481–768px), Laptop (769–1280px)
+   Rule: Only adds missing breakpoints, never overrides existing design
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Viewport meta safety ───────────────────────────────────── */
+* { box-sizing: border-box; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* ── Touch targets — min 44px for mobile ───────────────────── */
+@media (max-width: 768px) {
+  button, .btn, a.btn, input[type="submit"] {
+    min-height: 44px;
+  }
+  input, select, textarea {
+    font-size: 16px !important; /* prevents iOS zoom on focus */
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .navbar-brand { font-size: 1.1rem; }
+  .navbar-container { padding: 0.75rem 1rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LOGIN & SIGNUP PAGES
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .login-page, .signup-page { padding: 1rem; }
+  .login-card, .signup-card { padding: 1.25rem; border-radius: 1rem; }
+  .login-header h1, .signup-header h1 { font-size: 1.4rem; }
+  .role-selection { grid-template-columns: 1fr; }
+  .role-content { flex-direction: row; justify-content: flex-start; text-align: left; padding: 0.875rem; }
+  .role-icon { font-size: 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DASHBOARD LAYOUT — TABLET (769–1024px)
+══════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dash-sidebar {
+    width: 180px;
+    min-width: 180px;
+  }
+  .dash-nav-item { font-size: 0.8rem; padding: 0.6rem 1rem; }
+  .dash-main { padding: 1.25rem 1.5rem; }
+  .dashboard-header { padding: 1rem 1.25rem; }
+  .header-content h1 { font-size: 1.3rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   EARNINGS OVERVIEW — STATS GRID
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr !important; }
+  .stat-card { padding: 1rem; }
+  .stat-value { font-size: 1.4rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   WEEKLY EARNINGS CHART
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .weekly-earnings-chart { padding: 1.25rem; }
+  .chart-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .chart-container { height: 200px !important; }
+  .total-earnings { font-size: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .chart-container { height: 160px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   AI RISK MONITORING
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .risk-content { grid-template-columns: 1fr !important; }
+  .doughnut-wrapper { width: 140px !important; height: 140px !important; margin: 0 auto; }
+  .score-value { font-size: 1.75rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INSURANCE WALLET
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .insurance-wallet { padding: 1.25rem; }
+  .insurance-card { padding: 1.25rem; }
+  .coverage-amount { font-size: 1.75rem; }
+  .benefits-grid { grid-template-columns: 1fr !important; }
+  .card-footer { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .coverage-amount { font-size: 1.5rem; }
+  .card-footer { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MICRO LOAN ACCESS
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .micro-loan-access { padding: 1.25rem; }
+  .amount-value { font-size: 2rem; }
+  .loan-details { padding: 0.875rem; }
+}
+@media (max-width: 480px) {
+  .amount-value { font-size: 1.75rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DYNAMIC PRICING
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .dynamic-pricing { padding: 1.25rem; }
+  .pricing-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SMART RELOCATION
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .smart-relocation { padding: 1.25rem; }
+  .suggestion-card { flex-wrap: wrap; gap: 0.75rem; }
+  .suggestion-earnings { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   NOTIFICATIONS
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .notifications { padding: 1.25rem; }
+  .notification-item { padding: 0.875rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CLAIMS CENTER (USER)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .claims-center { padding: 1.25rem; }
+  .claims-header { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  .claim-filter-tabs { gap: 0.3rem; }
+  .claim-filter-tab { font-size: 0.7rem; padding: 0.25rem 0.6rem; }
+  .claim-card { padding: 0.875rem 1rem; }
+  .claim-card-top { flex-direction: column; gap: 0.75rem; }
+  .wizard-modal { padding: 1.25rem; max-height: 95vh; }
+  .wf-row { grid-template-columns: 1fr !important; }
+  .tl-track { gap: 0; }
+  .tl-stage { min-width: 56px; }
+  .tl-dot { width: 26px; height: 26px; font-size: 0.65rem; }
+  .tl-label { font-size: 0.6rem; }
+}
+@media (max-width: 480px) {
+  .claim-steps::before { left: 8%; right: 8%; }
+  .step-circle { width: 26px; height: 26px; font-size: 0.75rem; }
+  .claim-step { font-size: 0.65rem; }
+  .wizard-title { font-size: 0.95rem; }
+  .preview-row { font-size: 0.8rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ADMIN CLAIMS PANEL
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .admin-claims-panel > div[style*="repeat(6"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .admin-claims-panel { padding: 1.25rem; }
+  .admin-claims-panel > div[style*="repeat(6"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .acl-filters { flex-direction: column; }
+  .acl-search, .acl-select { width: 100%; }
+  .acl-table th, .acl-table td { padding: 0.6rem 0.75rem; font-size: 0.78rem; }
+  .acl-modal { max-height: 95vh; }
+  .acl-detail-grid { grid-template-columns: 1fr !important; }
+  .acl-action-row { flex-direction: column; }
+  .acl-action-row .btn { width: 100%; }
+}
+@media (max-width: 480px) {
+  .admin-claims-panel > div[style*="repeat(6"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .acl-table { font-size: 0.72rem; }
+  .acl-table th, .acl-table td { padding: 0.5rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ADMIN STATS
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .admin-stats .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .admin-stats .stats-grid { grid-template-columns: 1fr !important; }
+  .admin-stat-card { padding: 1rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RIDER ANALYTICS TABLE
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .rider-analytics-table { padding: 1.25rem; }
+  .table-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .table-actions { width: 100%; flex-direction: column; }
+  .search-input { width: 100%; }
+  .analytics-table th, .analytics-table td { padding: 0.6rem 0.5rem; font-size: 0.78rem; }
+  .table-footer { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  /* Modal */
+  .rider-modal { max-height: 95vh; }
+  .modal-stats { grid-template-columns: repeat(2, 1fr) !important; }
+  .modal-cols  { grid-template-columns: 1fr !important; }
+  .modal-footer { flex-direction: column; }
+  .modal-footer .btn { width: 100%; }
+}
+@media (max-width: 480px) {
+  .analytics-table th:nth-child(3),
+  .analytics-table td:nth-child(3) { display: none; } /* hide deliveries on small screens */
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FRAUD DETECTION
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .fraud-detection { padding: 1.25rem; position: static !important; }
+  .alert-card { padding: 0.875rem; }
+  .ai-analysis-panel > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   AI RISK PANEL (ADMIN)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .ai-risk-panel { padding: 1.25rem; }
+  .risk-card { padding: 1rem; }
+  .mini-chart { height: 50px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   EARNINGS CALENDAR
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .earnings-calendar-page { padding: 1rem; }
+  .calendar-header { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  .calendar-day { min-height: 52px; padding: 0.3rem; }
+  .day-number { font-size: 0.75rem; }
+  .day-earnings { font-size: 0.65rem; }
+  .day-keyword { display: none; }
+  .monthly-summary { flex-wrap: wrap; padding: 1rem; }
+  .summary-amount { font-size: 1.5rem; }
+  .earnings-form-panel { padding: 1rem; }
+  .form-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  .calendar-weekdays span { font-size: 0.65rem; }
+  .calendar-day { min-height: 44px; }
+  .calendar-grid-wrapper { padding: 1rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   USER PROFILE PAGE
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .profile-grid { grid-template-columns: 1fr !important; }
+  .profile-card__actions { flex-direction: column; }
+  .profile-card__actions .btn { width: 100%; }
+  .theme-options { flex-direction: column; }
+  .theme-btn { min-width: unset; width: 100%; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CLAIMS ANALYTICS (ADMIN)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .claims-analytics { padding: 1.25rem; }
+  .analytics-grid { grid-template-columns: 1fr !important; }
+  .bar-chart-container { height: 200px !important; }
+  .doughnut-chart-container { height: 200px !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PREMIUM POOL CHART
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .premium-pool-chart { padding: 1.25rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HOME PAGE SECTIONS
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero { padding: 3rem 1rem 2rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero p  { font-size: 1rem; }
+  .hero-buttons { flex-direction: column; gap: 0.75rem; }
+  .hero-buttons .btn { width: 100%; text-align: center; }
+  .features-grid { grid-template-columns: 1fr !important; }
+  .section-header { text-align: center; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero-buttons .btn { padding: 0.75rem 1.25rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SCROLL & OVERFLOW FIXES
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  .user-dashboard, .admin-dashboard { overflow-x: hidden; }
+  /* Tables scroll horizontally */
+  .table-container, .acl-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* Modals full width on mobile */
+  .wizard-overlay, .acl-modal-overlay, .modal-overlay {
+    padding: 0.5rem;
+    align-items: flex-end;
+  }
+  .wizard-modal, .acl-modal, .rider-modal {
+    border-radius: 1.25rem 1.25rem 0 0;
+    max-height: 92vh;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TABLET SPECIFIC (481–768px)
+══════════════════════════════════════════════════════════════ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .dash-content-grid { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .wizard-modal { border-radius: 1.25rem; }
+  .acl-modal    { border-radius: 1.25rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LAPTOP (1025–1280px) — sidebar visible, tighter grids
+══════════════════════════════════════════════════════════════ */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .dash-sidebar { width: 200px; min-width: 200px; }
+  .dash-main { padding: 1.5rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .dash-content-grid { gap: 1.25rem; }
+}

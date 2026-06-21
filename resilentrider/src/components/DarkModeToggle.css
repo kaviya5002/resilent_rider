@@ -1,0 +1,39 @@
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-track {
+  width: 60px;
+  height: 32px;
+  border-radius: 16px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: background-color 300ms ease;
+}
+
+.toggle-track.light {
+  background: linear-gradient(135deg, #FDB813, #F59E0B);
+}
+
+.toggle-track.dark {
+  background: linear-gradient(135deg, #1E293B, #334155);
+}
+
+.toggle-thumb {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-icon {
+  font-size: 0.875rem;
+}

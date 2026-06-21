@@ -1,0 +1,178 @@
+/* Dark Mode Variables */
+:root.dark-mode {
+  --primary: #60A5FA;
+  --secondary: #93C5FD;
+  --accent: #FCD34D;
+  --background: #0F172A;
+  --white: #1E293B;
+  --text-primary: #F1F5F9;
+  --text-secondary: #CBD5E1;
+  --text-light: #94A3B8;
+  --neutral: #334155;
+}
+
+/* Dark Mode Transitions */
+body.dark-mode,
+.dark-mode * {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode body {
+  background-color: #0F172A;
+  color: #F1F5F9;
+}
+
+.dark-mode .card,
+.dark-mode .stat-card,
+.dark-mode .admin-stat-card,
+.dark-mode .workflow-step,
+.dark-mode .benefit-card,
+.dark-mode .feature-card {
+  background: #1E293B;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .navbar {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .navbar.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F1F5F9;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+  border-color: #60A5FA;
+  background: #0F172A;
+}
+
+.dark-mode .btn-outline {
+  border-color: #60A5FA;
+  color: #60A5FA;
+}
+
+.dark-mode .btn-outline:hover {
+  background: #60A5FA;
+  color: #0F172A;
+}
+
+.dark-mode .footer {
+  background: #0F172A;
+}
+
+.dark-mode .problem-section,
+.dark-mode .solution-section,
+.dark-mode .ai-section,
+.dark-mode .benefits-section,
+.dark-mode .animated-workflow-section {
+  background: transparent;
+}
+
+.dark-mode .hero-stats {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark-mode .hero-stat {
+  border-right-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark-mode .problem-card,
+.dark-mode .ai-feature-card,
+.dark-mode .benefit-card,
+.dark-mode .workflow-step,
+.dark-mode .workflow-cta,
+.dark-mode .timeline-content {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  border-color: rgba(148, 197, 253, 0.1);
+}
+
+.dark-mode .problem-card:hover,
+.dark-mode .ai-feature-card:hover,
+.dark-mode .benefit-card:hover,
+.dark-mode .workflow-step:hover {
+  border-color: rgba(252, 211, 77, 0.35);
+}
+
+.dark-mode .problem-card h3,
+.dark-mode .ai-feature-card h3,
+.dark-mode .benefit-card h3 {
+  color: var(--primary);
+}
+
+.dark-mode .problem-card p,
+.dark-mode .section-header p,
+.dark-mode .ai-feature-card p,
+.dark-mode .benefit-card p,
+.dark-mode .step-description,
+.dark-mode .workflow-header p,
+.dark-mode .solution-text p,
+.dark-mode .timeline-content p {
+  color: var(--secondary);
+}
+
+.dark-mode .stat-icon-wrapper,
+.dark-mode .step-icon-wrapper {
+  background: #0F172A;
+}
+
+.dark-mode .insurance-card {
+  background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+}
+
+.dark-mode .login-card,
+.dark-mode .signup-card {
+  background: #1E293B;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .notification-item,
+.dark-mode .alert-card {
+  background: #0F172A;
+}
+
+.dark-mode .notification-item:hover,
+.dark-mode .alert-card:hover {
+  background: #1E293B;
+}
+
+.dark-mode .analytics-table thead {
+  background: #0F172A;
+}
+
+.dark-mode .analytics-table tbody tr:hover {
+  background: #0F172A;
+}
+
+.dark-mode .search-input {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F1F5F9;
+}
+
+.dark-mode .page-btn {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F1F5F9;
+}
+
+.dark-mode .page-btn:hover {
+  background: #0F172A;
+}
+
+.dark-mode .page-btn.active {
+  background: #60A5FA;
+  border-color: #60A5FA;
+}

@@ -1,0 +1,365 @@
+.signup-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-card {
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(17, 34, 80, 0.15);
+  position: relative;
+  z-index: 1;
+  margin: 2rem 0;
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.signup-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.signup-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--neutral);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 300ms ease-in-out;
+  background: var(--background);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(17, 34, 80, 0.1);
+  outline: none;
+}
+
+.form-group input.error {
+  border-color: #EF4444;
+}
+
+.error-message {
+  color: #EF4444;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 0.875rem;
+}
+
+.success-message {
+  color: #10B981;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.password-strength {
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--neutral);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 300ms ease-in-out, background-color 300ms ease-in-out;
+  border-radius: 2px;
+}
+
+.strength-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.role-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.role-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.role-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border: 2px solid var(--neutral);
+  border-radius: 0.75rem;
+  background: var(--background);
+  transition: all 300ms ease-in-out;
+  text-align: center;
+}
+
+.role-option:hover .role-content {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.role-option.active .role-content {
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(17, 34, 80, 0.1);
+}
+
+.role-icon {
+  font-size: 2rem;
+}
+
+.role-content strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 0.125rem;
+}
+
+.role-content small {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+}
+
+.terms-agreement {
+  text-align: center;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 0.75rem;
+}
+
+.terms-agreement p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.terms-agreement a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+
+.terms-agreement a:hover {
+  color: var(--accent);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-prompt {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral);
+}
+
+.login-prompt p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.login-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+
+.login-link:hover {
+  color: var(--accent);
+}
+
+.signup-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent);
+  top: -120px;
+  right: -120px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  background: var(--primary);
+  bottom: -80px;
+  left: -80px;
+  animation-delay: 7s;
+}
+
+.shape-3 {
+  width: 180px;
+  height: 180px;
+  background: var(--secondary);
+  top: 40%;
+  left: 5%;
+  animation-delay: 14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 1.5rem;
+  }
+
+  .signup-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .signup-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .role-selection {
+    grid-template-columns: 1fr;
+  }
+
+  .role-content {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 1.5rem;
+  }
+
+  .signup-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input {
+    padding: 0.75rem;
+  }
+
+  .role-content {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,87 @@
+.ppu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.ppu__avatar {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(17,34,80,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+.ppu__avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(17,34,80,0.2);
+}
+
+.ppu__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ppu__initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--white);
+  user-select: none;
+}
+
+.ppu__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17,34,80,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.ppu__avatar:hover .ppu__overlay { opacity: 1; }
+
+/* Text links below avatar */
+.ppu__links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ppu__link {
+  background: none;
+  border: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+.ppu__link:hover        { opacity: 0.65; }
+.ppu__link--remove      { color: #EF4444; }
+
+.ppu__error {
+  font-size: 0.7rem;
+  color: #EF4444;
+  text-align: center;
+  max-width: 110px;
+}

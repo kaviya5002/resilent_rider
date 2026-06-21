@@ -1,0 +1,51 @@
+.admin-avatar {
+  background: var(--secondary);
+}
+
+/* Wrapper inside admin-dashboard that holds hero + body grid + broadcast */
+.profile-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* Hero layout for admin (horizontal flex) */
+.profile-hero__avatar-col,
+.profile-hero__info-col,
+.profile-hero__stats-col,
+.profile-hero__action-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-hero__info-col {
+  flex: 1;
+  min-width: 0;
+  gap: 0.25rem;
+}
+
+.profile-hero__stats-col {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.profile-hero__action-col {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .profile-hero__stats-col { display: none; }
+}
+
+@media (max-width: 768px) {
+  .profile-wrap { padding: 1rem; }
+  .profile-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

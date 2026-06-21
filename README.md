@@ -68,8 +68,7 @@ External Services:
 
 The complete end-to-end workflow showing rider onboarding, risk scoring, dynamic insurance assignment, claims processing, policy intelligence, and real-time automation.
 
-<img width="1408" height="768" alt="workflow ofresiltentrider" src="https://github.com/user-attachments/assets/d26825e7-ace8-4ec7-8308-3795cbc8b243" /><img width="1895" height="870" alt="Screenshot 2026-06-21 093011" src="https://github.com/user-attachments/assets/ecb4a359-e0d4-468c-a6ea-47c247b8a713" />
-
+<img width="1408" height="768" alt="workflow ofresiltentrider" src="https://github.com/user-attachments/assets/d26825e7-ace8-4ec7-8308-3795cbc8b243" />
 ---
 
 ### Claims Intelligence & Fraud Detection
